@@ -6,6 +6,7 @@ import CTA from '../components/CTA.astro';
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
 import { getOptimizedImage } from '../js/utils';
 import landingImage from '../assets/images/landing.jpg'; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import SecondHero from '../components/SecondHero.astro';
 const optimizedImage = await getOptimizedImage(landingImage);
 ---
 
@@ -14,5 +15,5 @@ const optimizedImage = await getOptimizedImage(landingImage);
   description='Meta description for the page'
   preloadedImage={optimizedImage}
 >
-  <Hero />
+  <SecondHero />
 </BaseLayout>
