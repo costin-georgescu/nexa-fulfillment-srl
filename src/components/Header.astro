@@ -1,66 +1,63 @@
 ---
-import navData from "../data/navData.json";
-import DarkModeToggle from "./DarkModeToggle.astro";
+import navData from '../data/navData.json';
+import DarkModeToggle from './DarkModeToggle.astro';
 ---
 
 <!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
-<header id="cs-navigation">
-  <div class="cs-container">
+<header id='cs-navigation'>
+  <div class='cs-container'>
     <!--Nav Logo-->
-    <a href="/" class="cs-logo" aria-label="back to home">
+    <a href='' class='cs-logo' aria-label='back to home'>
       <img
-        src="/assets/svgs/logo-black.svg"
-        alt="logo"
-        width="210"
-        height="29"
-        aria-hidden="true"
-        decoding="async"
+        src='/public/assets/images/nexa-logo.jpg'
+        alt='logo'
+        width='210'
+        height='29'
+        aria-hidden='true'
+        decoding='async'
       />
     </a>
     <!--Navigation List-->
-    <nav class="cs-nav" role="navigation">
+    <nav class='cs-nav' role='navigation'>
       <!--Mobile Nav Toggle-->
-      <button
-        class="cs-toggle"
-        id="mobile-menu-toggle"
-        aria-label="mobile menu toggle"
-        aria-expanded="false"
-        aria-controls="cs-expanded-ul"
-      >
-        <div class="cs-box" aria-hidden="true">
-          <span class="cs-line cs-line1" aria-hidden="true"></span>
-          <span class="cs-line cs-line2" aria-hidden="true"></span>
-          <span class="cs-line cs-line3" aria-hidden="true"></span>
+      <button class='cs-toggle' aria-label='mobile menu toggle'>
+        <div class='cs-box' aria-hidden='true'>
+          <span class='cs-line cs-line1' aria-hidden='true'></span>
+          <span class='cs-line cs-line2' aria-hidden='true'></span>
+          <span class='cs-line cs-line3' aria-hidden='true'></span>
         </div>
       </button>
-      <!-- This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one -->
-      <div class="cs-ul-wrapper">
-        <ul id="cs-expanded-ul" class="cs-ul">
-          {
-            navData.map((entry) => (
-              <li class="cs-li">
-                <a
-                  href={entry.url}
-                  class:list={[
-                    "cs-li-link",
-                    { "cs-active": Astro.url.pathname === entry.url },
-                  ]}
-                >
-                  {entry.key}
-                </a>
-              </li>
-            ))
-          }
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class='cs-ul-wrapper'>
+        <ul id='cs-expanded' class='cs-ul' aria-expanded='false'>
+          <li class='cs-li'>
+            <a href='' class='cs-li-link cs-active'> Home </a>
+          </li>
+          <li class='cs-li'>
+            <a href='' class='cs-li-link'> About </a>
+          </li>
+          <li class='cs-li'>
+            <a href='' class='cs-li-link'> Services </a>
+          </li>
+          <li class='cs-li'>
+            <a href='' class='cs-li-link'> About Us </a>
+          </li>
+          <li class='cs-li'>
+            <a href='' class='cs-li-link'> FAQ </a>
+          </li>
         </ul>
       </div>
     </nav>
-    <a href="/contact" class="cs-button-solid cs-nav-button">Contact Us</a>
+    <a href='' class='cs-button-solid cs-nav-button'>Contact Us</a>
     <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-    <DarkModeToggle />
+    <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
   </div>
 </header>
 
-<style lang="less">
+<style lang='less'>
   /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -74,52 +71,48 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     }
 
     #cs-navigation {
-      /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-      font-family: "Roboto", "Arial", sans-serif;
       width: 100%;
-      /* prevents padding from affecting height and width */
+      /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       padding: (12/16rem) (16/16rem);
-      background-color: #fff;
+      background-color: var(--backgroundDark);
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
 
       &:before {
-        /* black blurred overlay */
-        content: "";
-        width: 0%;
-        height: 100vh;
+        content: '';
+        width: 100%;
+        height: 0vh;
         background: rgba(0, 0, 0, 0.6);
         opacity: 0;
         display: block;
         position: absolute;
         top: 100%;
         right: 0;
-        z-index: -11;
+        z-index: -1100;
         transition:
-          width 0.5s,
-          opacity 0.3s;
+          height 0.5s,
+          opacity 0.5s;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
       }
 
       &.cs-active {
         &:before {
-          width: 100%;
+          height: 150vh;
           opacity: 1;
         }
 
         .cs-ul-wrapper {
           opacity: 1;
-          visibility: visible;
-          transform: scaleX(1);
-          transition-delay: 0.2s;
+          transform: scaleY(1);
+          transition-delay: 0.15s;
         }
 
         .cs-li {
           opacity: 1;
-          transform: translateX(0);
+          transform: translateY(0);
         }
       }
 
@@ -135,7 +128,7 @@ import DarkModeToggle from "./DarkModeToggle.astro";
         max-width: (146/16rem);
         height: 100%;
         margin: 0 auto 0 0;
-        /* prevents padding from affecting height and width */
+        /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         padding: 0;
         display: flex;
@@ -148,8 +141,6 @@ import DarkModeToggle from "./DarkModeToggle.astro";
           height: 100%;
           /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
           object-fit: contain;
-          /* places the image to the left edge of the parent */
-          object-position: left;
         }
       }
 
@@ -236,47 +227,46 @@ import DarkModeToggle from "./DarkModeToggle.astro";
       }
 
       .cs-ul-wrapper {
-        height: 100vh;
+        width: 100%;
+        height: auto;
+        padding-bottom: (48/20em);
         background-color: #fff;
         box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
         opacity: 0;
-        visibility: hidden;
         position: absolute;
         top: 100%;
-        right: 0;
-        left: auto;
+        left: 0;
         z-index: -1;
         overflow: hidden;
-        transform: scaleX(0);
+        transform: scaleY(0);
         transition:
           transform 0.4s,
           opacity 0.3s;
-        transform-origin: top right;
+        transform-origin: top;
       }
 
       .cs-ul {
-        width: auto;
-        min-width: 40%;
-        height: 65vh;
+        width: 100%;
+        height: auto;
+        max-height: 65vh;
         margin: 0;
-        /* 28px - 40px */
-        padding: (48/16rem) clamp(1.75rem, 3vw, 2.5rem) (32/16rem) (70/16rem);
+        padding: (48/16rem) 0 0 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-end;
+        align-items: center;
         gap: (20/16rem);
         overflow: scroll;
       }
 
       .cs-li {
-        text-align: right;
+        text-align: center;
         list-style: none;
         width: 100%;
         margin-right: 0;
         opacity: 0;
         /* transition from these values */
-        transform: translateX(-40/16rem);
+        transform: translateY(-4.375rem);
         transition:
           transform 0.6s,
           opacity 0.9s;
@@ -308,6 +298,18 @@ import DarkModeToggle from "./DarkModeToggle.astro";
         &:nth-of-type(9) {
           transition-delay: 0.45s;
         }
+        &:nth-of-type(10) {
+          transition-delay: 0.5s;
+        }
+        &:nth-of-type(11) {
+          transition-delay: 0.55s;
+        }
+        &:nth-of-type(12) {
+          transition-delay: 0.6s;
+        }
+        &:nth-of-type(13) {
+          transition-delay: 0.65s;
+        }
       }
 
       .cs-li-link {
@@ -322,7 +324,7 @@ import DarkModeToggle from "./DarkModeToggle.astro";
 
         &:before {
           /* active state underline */
-          content: "";
+          content: '';
           width: 100%;
           height: 1px;
           background: currentColor;
@@ -346,32 +348,6 @@ import DarkModeToggle from "./DarkModeToggle.astro";
     }
   }
 
-  /* Dark Mode */
-  @media only screen and (max-width: 63.9375rem) {
-    body.dark-mode {
-      #cs-navigation {
-        background-color: var(--dark);
-
-        .cs-logo {
-          /* makes it white */
-          filter: grayscale(1) brightness(1000%);
-        }
-
-        .cs-line {
-          background-color: #fff;
-        }
-
-        .cs-ul-wrapper {
-          background-color: var(--medium);
-        }
-
-        .cs-li-link {
-          color: var(--bodyTextColorWhite);
-        }
-      }
-    }
-  }
-
   /*-- -------------------------- -->
 <---     Desktop Navigation     -->
 <--- -------------------------- -*/
@@ -379,13 +355,11 @@ import DarkModeToggle from "./DarkModeToggle.astro";
   /* Small Desktop - 1024px */
   @media only screen and (min-width: 64rem) {
     #cs-navigation {
-      /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-      font-family: "Roboto", "Arial", sans-serif;
       width: 100%;
-      /* prevents padding from affecting height and width */
+      /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       padding: 0 (16/16rem);
-      background-color: #fff;
+      background-color: var(--backgroundDark);
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
@@ -465,7 +439,7 @@ import DarkModeToggle from "./DarkModeToggle.astro";
 
         &:before {
           /* active state underline */
-          content: "";
+          content: '';
           width: 0%;
           height: 2px;
           background: var(--primary);
@@ -475,30 +449,6 @@ import DarkModeToggle from "./DarkModeToggle.astro";
           bottom: (0/16rem);
           left: 0;
           transition: width 0.3s;
-        }
-      }
-    }
-  }
-
-  /* Dark Mode */
-  @media only screen and (min-width: 64rem) {
-    body.dark-mode {
-      #cs-navigation {
-        background-color: var(--dark);
-
-        .cs-logo {
-          /* makes it turn white */
-          filter: grayscale(1) brightness(1000%);
-        }
-
-        .cs-li-link {
-          color: var(--bodyTextColorWhite);
-        }
-
-        .cs-li-link {
-          &:before {
-            background-color: var(--primaryLight);
-          }
         }
       }
     }
