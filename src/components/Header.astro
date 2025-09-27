@@ -30,16 +30,16 @@ import navData from '../data/navData.json';
       <div class='cs-ul-wrapper'>
         <ul id='cs-expanded' class='cs-ul' aria-expanded='false'>
           <li class='cs-li'>
-            <a href='' class='cs-li-link cs-active'> Home </a>
+            <a href='' class='cs-li-link cs-active'> ACASA </a>
           </li>
           <li class='cs-li'>
-            <a href='' class='cs-li-link'> About </a>
+            <a href='' class='cs-li-link'> SERVICII </a>
           </li>
           <li class='cs-li'>
-            <a href='' class='cs-li-link'> Services </a>
+            <a href='' class='cs-li-link'> DESPRE NOI </a>
           </li>
           <li class='cs-li'>
-            <a href='' class='cs-li-link'> About Us </a>
+            <a href='' class='cs-li-link'> RECENZII </a>
           </li>
           <li class='cs-li'>
             <a href='' class='cs-li-link'> FAQ </a>
@@ -47,7 +47,7 @@ import navData from '../data/navData.json';
         </ul>
       </div>
     </nav>
-    <a href='' class='cs-button-solid cs-nav-button'>Contact Us</a>
+    <a href='' class='cs-button-solid cs-nav-button'>Contact</a>
   </div>
 </header>
 
@@ -313,6 +313,7 @@ import navData from '../data/navData.json';
         text-decoration: none;
         margin: 0;
         color: var(--headerColor);
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
         display: inline-block;
         position: relative;
 
@@ -413,10 +414,12 @@ import navData from '../data/navData.json';
       .cs-li-link {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 1vw, 1rem);
+        font-weight: 700;
         line-height: 1.5em;
         text-decoration: none;
         margin: 0;
         color: var(--bodyTextColorWhite);
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
         display: block;
         position: relative;
         &:hover {

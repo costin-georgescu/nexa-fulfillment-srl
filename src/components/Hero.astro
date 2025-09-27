@@ -3,14 +3,17 @@
   <div class='cs-container'>
     <div class='cs-content'>
       <span class='cs-topper'>Logistică de Înaltă Performanță</span>
-      <h1 class='cs-title'>Soluții Complete de Fulfillment pentru Afacerea Ta</h1>
+      <h1 class='cs-title'>
+        Soluții Complete de Fulfillment pentru Afacerea Ta
+      </h1>
       <p class='cs-text'>
-        Oferim servicii profesionale de depozitare, prelucrare comenzi și livrări rapide,
-        pentru a-ți optimiza lanțul de aprovizionare și a-ți crește satisfacția clienților.
+        Oferim servicii profesionale de depozitare, prelucrare comenzi și
+        livrări rapide, pentru a-ți optimiza lanțul de aprovizionare și a-ți
+        crește satisfacția clienților.
       </p>
       <div class='cs-button-group'>
-        <a href='' class='cs-button-solid cs-button1'>Înscrie-te în Comunitate</a>
-        <a href='' class='cs-button-solid cs-button2'>Donează Acum</a>
+        <a href='' class='cs-button-solid cs-button1'>Să începem</a>
+        <a href='' class='cs-button-solid cs-button2'>Află mai multe</a>
       </div>
     </div>
   </div>
@@ -110,6 +113,7 @@
         text-transform: uppercase;
         margin-bottom: (16/16rem);
         color: var(--bodyTextColorGray);
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
         display: inline-block;
         position: relative;
       }
@@ -122,6 +126,7 @@
         text-align: center;
         max-width: (829/16rem);
         color: #fff;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
         position: relative;
       }
 
@@ -136,6 +141,7 @@
         margin: 0 auto 0;
         margin-bottom: (32/16rem);
         color: var(--bodyTextColorGray);
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
       }
 
       .cs-button-group {
@@ -145,8 +151,20 @@
         gap: (8/16rem);
       }
 
-      .cs-button1 {
-        background-color: var(--secondary);
+      .cs-button2 {
+        background-color: transparent;
+        border: 2px solid var(--primary);
+        color: var(--bodyTextColorWhite);
+        transition: border-color 0.3s;
+
+        &:hover {
+          color: var(--bodyTextColorGray);
+          border-color: var(--secondary);
+        }
+
+        &:before {
+          background-color: transparent;
+        }
       }
     }
   }

@@ -2,28 +2,27 @@
 <section id='sbsr-2326'>
   <div class='cs-container'>
     <div class='cs-content'>
-      <span class='cs-topper'>About Us</span>
-      <h2 class='cs-title'>Motive pentru a lucra cu NEXA Fulfillment</h2>
+      <h2 class='cs-title'>Motive pentru a lucra cu impreuna cu noi</h2>
       <p class='cs-text'>
         NEXA Fulfillment SRL este o companie specializată în oferirea
         serviciilor de fulfillment și logistici.
       </p>
-      <h3 class='cs-h3'>What Sets Us Apart</h3>
+      <h3 class='cs-h3'>Ce ne diferentiază</h3>
       <ul class='cs-ul'>
         <li class='cs-li'>
-          Capital 100% romanesc – sustinem dezvoltarea locala si parteneriatele
-          pe termen lung.
+          • Capital 100% romanesc – sustinem dezvoltarea locala si
+          parteneriatele pe termen lung.
         </li>
         <li class='cs-li'>
-          Flexibilitate – solutii personalizate pentru afaceri la inceput de
+          • Flexibilitate – solutii personalizate pentru afaceri la inceput de
           drum sau branduri consolidate.
         </li>
         <li class='cs-li'>
-          Ne angajam sa utilizam resursele intr-un mod responsabil, punand
+          • Ne angajam sa utilizam resursele intr-un mod responsabil, punand
           accent pe solutii sustenabile si eco friendly.
         </li>
         <li class='cs-li'>
-          Eficienta si transparenta – stim ca fiecare comanda este importanta.
+          • Eficienta si transparenta – stim ca fiecare comanda este importanta.
         </li>
       </ul>
       <a href='' class='cs-button-solid'>Afla mai multe</a>
@@ -32,19 +31,13 @@
       <!--Top left image-->
       <picture class='cs-picture cs-picture1'>
         <!--Mobile Image-->
-        <source
-          media='(max-width: 600px)'
-          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg'
-        />
+        <source media='(max-width: 600px)' srcset='assets/images/1.jpg' />
         <!--Tablet and above Image-->
-        <source
-          media='(min-width: 601px)'
-          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg'
-        />
+        <source media='(min-width: 601px)' srcset='assets/images/1.jpg' />
         <img
           loading='lazy'
           decoding='async'
-          src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg'
+          src='assets/images/1.jpg'
           alt='wedding photoshoot'
           width='297'
           height='366'
@@ -53,43 +46,16 @@
       <!--Bottom right image-->
       <picture class='cs-picture cs-picture2'>
         <!--Mobile Image-->
-        <source
-          media='(max-width: 600px)'
-          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg'
-        />
+        <source media='(max-width: 600px)' srcset='assets/images/2.jpg' />
         <!--Tablet and above Image-->
-        <source
-          media='(min-width: 601px)'
-          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg'
-        />
+        <source media='(min-width: 601px)' srcset='assets/images/2.jpg' />
         <img
           loading='lazy'
           decoding='async'
-          src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg'
+          src='assets/images/2.jpg'
           alt='photograph of a woman'
           width='405'
           height='376'
-        />
-      </picture>
-      <!--Middle image-->
-      <picture class='cs-picture cs-picture3'>
-        <!--Mobile Image-->
-        <source
-          media='(max-width: 600px)'
-          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png'
-        />
-        <!--Tablet and above Image-->
-        <source
-          media='(min-width: 601px)'
-          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png'
-        />
-        <img
-          loading='lazy'
-          decoding='async'
-          src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png'
-          alt="children's birthday"
-          width='218'
-          height='155'
         />
       </picture>
     </div>
@@ -138,6 +104,7 @@
 
       .cs-text {
         margin-bottom: (16/16rem);
+        color: var(--bodyTextColorGray);
 
         &:last-of-type {
           margin-bottom: (24/16rem);
@@ -149,7 +116,7 @@
         font-weight: 700;
         line-height: 1.5em;
         margin: 0;
-        color: var(--headerColor);
+        color: var(--bodyTextColorWhite);
       }
 
       .cs-ul {
@@ -166,7 +133,7 @@
         list-style: none;
         /* 20px - 24px */
         padding-left: clamp(1.25rem, 3vw, 1.5rem);
-        color: var(--bodyTextColor);
+        color: var(--bodyTextColorGray);
         position: relative;
 
         strong {
@@ -315,8 +282,6 @@
       .cs-picture1 {
         width: (412/16em);
         height: (412/16em);
-        border-right: (14/16em) solid #fff;
-        border-bottom: (14/16em) solid #fff;
         top: 0;
         bottom: (281/16em);
         left: 0;

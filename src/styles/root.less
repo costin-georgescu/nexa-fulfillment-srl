@@ -9,7 +9,7 @@
   // Website colors
   :root {
     --primary: #016fe7;
-    --primaryLight: #ffd675;
+    --primaryHover: #003a79;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
@@ -45,6 +45,7 @@
     line-height: 1.2em;
     margin: 0 auto (16/16rem);
     color: var(--headerColor);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
     position: relative;
   }
 
@@ -78,7 +79,7 @@
     transition-delay: 0.1s;
 
     &:hover {
-      color: #fff;
+      color: var(--bodyTextColorWhite);
       &:before {
         width: 100%;
       }
@@ -90,7 +91,7 @@
       //Transition properties
       width: 0;
       height: 100%;
-      background-color: #000;
+      background-color: var(--secondary);
       opacity: 1;
       display: block;
       position: absolute;
