@@ -1,0 +1,391 @@
+<!-- ============================================ --><!--              Side By Side Reverse            --><!-- ============================================ -->
+<section id='sbsr-2326'>
+  <div class='cs-container'>
+    <div class='cs-content'>
+      <span class='cs-topper'>About Us</span>
+      <h2 class='cs-title'>Motive pentru a lucra cu NEXA Fulfillment</h2>
+      <p class='cs-text'>
+        NEXA Fulfillment SRL este o companie specializată în oferirea
+        serviciilor de fulfillment și logistici.
+      </p>
+      <h3 class='cs-h3'>What Sets Us Apart</h3>
+      <ul class='cs-ul'>
+        <li class='cs-li'>
+          Capital 100% romanesc – sustinem dezvoltarea locala si parteneriatele
+          pe termen lung.
+        </li>
+        <li class='cs-li'>
+          Flexibilitate – solutii personalizate pentru afaceri la inceput de
+          drum sau branduri consolidate.
+        </li>
+        <li class='cs-li'>
+          Ne angajam sa utilizam resursele intr-un mod responsabil, punand
+          accent pe solutii sustenabile si eco friendly.
+        </li>
+        <li class='cs-li'>
+          Eficienta si transparenta – stim ca fiecare comanda este importanta.
+        </li>
+      </ul>
+      <a href='' class='cs-button-solid'>Afla mai multe</a>
+    </div>
+    <div class='cs-image-group'>
+      <!--Top left image-->
+      <picture class='cs-picture cs-picture1'>
+        <!--Mobile Image-->
+        <source
+          media='(max-width: 600px)'
+          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg'
+        />
+        <!--Tablet and above Image-->
+        <source
+          media='(min-width: 601px)'
+          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg'
+        />
+        <img
+          loading='lazy'
+          decoding='async'
+          src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg'
+          alt='wedding photoshoot'
+          width='297'
+          height='366'
+        />
+      </picture>
+      <!--Bottom right image-->
+      <picture class='cs-picture cs-picture2'>
+        <!--Mobile Image-->
+        <source
+          media='(max-width: 600px)'
+          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg'
+        />
+        <!--Tablet and above Image-->
+        <source
+          media='(min-width: 601px)'
+          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg'
+        />
+        <img
+          loading='lazy'
+          decoding='async'
+          src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg'
+          alt='photograph of a woman'
+          width='405'
+          height='376'
+        />
+      </picture>
+      <!--Middle image-->
+      <picture class='cs-picture cs-picture3'>
+        <!--Mobile Image-->
+        <source
+          media='(max-width: 600px)'
+          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png'
+        />
+        <!--Tablet and above Image-->
+        <source
+          media='(min-width: 601px)'
+          srcset='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png'
+        />
+        <img
+          loading='lazy'
+          decoding='async'
+          src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png'
+          alt="children's birthday"
+          width='218'
+          height='155'
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<style lang='less'>
+  /*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbsr-2326 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: (704/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 4vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to center if content needs to be centrally aligned */
+        text-align: left;
+        width: 100%;
+        max-width: (586/16rem);
+        display: flex;
+        flex-direction: column;
+        /* aligns content to the left, set to center to centrally align */
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        max-width: 30ch;
+      }
+
+      .cs-text {
+        margin-bottom: (16/16rem);
+
+        &:last-of-type {
+          margin-bottom: (24/16rem);
+        }
+      }
+
+      .cs-h3 {
+        font-size: (16/16rem);
+        font-weight: 700;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-ul {
+        margin: (12/16rem) 0 (32/16rem);
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: (12/16rem);
+      }
+
+      .cs-li {
+        font-size: (16/16rem);
+        line-height: 1.5em;
+        list-style: none;
+        /* 20px - 24px */
+        padding-left: clamp(1.25rem, 3vw, 1.5rem);
+        color: var(--bodyTextColor);
+        position: relative;
+
+        strong {
+          color: var(--headerColor);
+        }
+
+        &::before {
+          content: '';
+          width: (8/16rem);
+          height: (8/16rem);
+          margin-top: (8/16rem);
+          background-color: var(--secondary);
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      .cs-button-box {
+        font-size: inherit;
+        width: 100%;
+        max-width: (630/16rem);
+        /* 48px - 64px */
+        margin: clamp(3rem, 6.5vw, 4rem) 0 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: (24/16rem);
+      }
+
+      .cs-link {
+        /* using ems for font size and wrapper values so we can scale them with a font size at desktop */
+        text-decoration: none;
+        padding-right: (30/16rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: (16/16rem);
+        position: relative;
+
+        &:hover {
+          &:before {
+            width: 100%;
+            height: (72/16em);
+          }
+          .cs-wrapper {
+            transform: scale(1.2);
+          }
+
+          .cs-icon {
+            transform: translateX(0.4375rem);
+          }
+        }
+
+        &:before {
+          /* light green circle that animates on hover */
+          content: '';
+          width: (60/16em);
+          height: (60/16em);
+          background: var(--primary);
+          opacity: 0.05;
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 0;
+          z-index: -1;
+          transform: translateY(-50%);
+          transition:
+            width 0.3s,
+            height 0.3s,
+            border-radius 0.3s;
+        }
+      }
+
+      .cs-wrapper {
+        width: (60/16em);
+        height: (60/16em);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        transition: transform 0.3s;
+      }
+
+      .cs-icon {
+        width: (24/16rem);
+        height: auto;
+        display: block;
+        transition: transform 0.3s;
+      }
+
+      .cs-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: (4/16rem);
+      }
+
+      .cs-header {
+        font-size: (16/16em);
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+      }
+
+      .cs-link-content {
+        font-size: (25/16em);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+      }
+
+      .cs-image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .74em, resets at desktop */
+        font-size: ~'min(2.32vw, .9rem)';
+        width: (630/16em);
+        height: (578/16em);
+        display: block;
+        position: relative;
+        z-index: 1;
+        order: -1;
+      }
+
+      .cs-picture {
+        display: block;
+        position: absolute;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .cs-picture1 {
+        width: (412/16em);
+        height: (412/16em);
+        border-right: (14/16em) solid #fff;
+        border-bottom: (14/16em) solid #fff;
+        top: 0;
+        bottom: (281/16em);
+        left: 0;
+      }
+
+      .cs-picture2 {
+        width: (413/16em);
+        height: (352/16em);
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      .cs-picture3 {
+        width: (233/16em);
+        height: auto;
+        bottom: (93/16em);
+        left: (100/16em);
+
+        img {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbsr-2326 {
+      .cs-container {
+        max-width: (1280/16rem);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbsr-2326 {
+      .cs-container {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .cs-button-box {
+        /* add font size scaling to make the elements smaller so they fit horizontally */
+        font-size: ~'min(1.4vw, 1rem)';
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+
+      .cs-image-group {
+        font-size: ~'min(1.1vw, 1rem)';
+        height: auto;
+        min-height: (578/16em);
+        margin-bottom: (70/16rem);
+        order: initial;
+        flex: none;
+      }
+
+      .cs-picture1 {
+        height: auto;
+        top: 0;
+        bottom: (166/16em);
+      }
+
+      .cs-picture2 {
+        height: auto;
+        top: (226/16em);
+      }
+    }
+  }
+</style>
