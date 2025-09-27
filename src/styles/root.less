@@ -75,11 +75,12 @@
     display: inline-block;
     position: relative;
     z-index: 1;
-    transition: color 0.3s;
+    transition: color 0.3s, box-shadow 0.3s ease;
     transition-delay: 0.1s;
 
     &:hover {
       color: var(--bodyTextColorWhite);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       &:before {
         width: 100%;
       }
