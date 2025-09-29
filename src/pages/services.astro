@@ -14,51 +14,95 @@ const optimizedImage = await getOptimizedImage(landingImage);
   description='Meta description for the page'
   preloadedImage={optimizedImage}
 >
+  <!-- <Landing title='Servicii' image={optimizedImage} /> -->
+
   <!-- ============================================ -->
-  <!--                 Interior Page                -->
+  <!--                 Content Page                 -->
   <!-- ============================================ -->
 
-  <Landing title='Servicii' image={optimizedImage} />
+  <!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
 
-  <section id='content-page-715'>
+  <!-- ============================================ -->
+  <!--                   Banner                     -->
+  <!-- ============================================ -->
+
+  <div id='banner-716'>
+    <div class='cs-container'>
+      <span class='cs-int-title'>Serviciile noastre</span>
+    </div>
+    <!--Background Image-->
+    <picture class='cs-background'>
+      <!--Mobile Image-->
+      <source
+        media='(max-width: 600px)'
+        srcset='/public/assets/images/services.jpg'
+      />
+      <!--Tablet and above Image-->
+      <source
+        media='(min-width: 601px)'
+        srcset='/public/assets/images/services.jpg'
+      />
+      <img
+        loading='lazy'
+        decoding='async'
+        src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg'
+        alt='pills'
+        width='1280'
+        height='568'
+        aria-hidden='true'
+      />
+    </picture>
+  </div>
+
+  <section id='content-page-716'>
     <div class='cs-container'>
       <div class='cs-content'>
-        <h1 class='cs-title'>
-          Soluții personalizate și scalabile de <span class='cs-color'
-            >fulfillment.</span
-          >
-        </h1>
         <h2>
           Oferim o solutie completa de externalizare a operatiunilor logistice,
           eliminand provocarile legate de gestionarea stocurilor, procesarea
           comenzilor, ambalare si livrare consumatoare de timp.
         </h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4-6</h4>
+        <h3>Depozitare si gestionare stocuri</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          laboriosam eum quae in temporibus cumque tempora expedita mollitia
-          nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat
-          esse non sunt! Lorem ipsum dolor sit amet <a href=''>link example</a>.
-          Est, quis!
+          Oferim spatii de depozitare moderne si organizate, cu sistem digital
+          de gestionare a stocurilor in timp real, pentru acuratete si control
+          total.
         </p>
+        <h3>Procesare si ambalare comenzi</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          laboriosam eum quae in temporibus cumque tempora expedita mollitia
-          nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi
-          quos enim!
+          Preluam rapid comenzile, le ambalam profesional conform
+          specificatiilor fiecarui brand si pregatim expedierile pentru livrare
+          <strong>in aceeasi zi. </strong>
         </p>
-        <h3>Heading 3</h3>
-        <ol>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ol>
-        <h4>Heading 4-6</h4>
+
+        <h3>Gestionarea retururilor</h3>
+        <p>
+          Oferim servicii complete de procesare a retururilor: receptie,
+          verificare, reintegrare in stoc sau raportare detaliata, pentru o
+          experienta post-vanzare fara probleme.
+        </p>
+
+        <h3>Alte servicii</h3>
+
         <ul>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Integrare cu platforme e-commerce.</li>
+          <li>Intermediere livrare nationala si internationala</li>
+          <li>Personalizare ambalaje si inserturi de brand</li>
+          <li>Suport clienti (Customer Service – optional sau dedicat)</li>
+          <li>Servicii de raportare si analiza</li>
+          <li>Servicii de prelucrare si reambalare produse</li>
+          <li>
+            Scalabilitate in perioade de varf (campanii, Black Friday,
+            sarbatori)
+          </li>
         </ul>
       </div>
       <div class='cs-image-group'>
@@ -66,20 +110,21 @@ const optimizedImage = await getOptimizedImage(landingImage);
           <!--Mobile Image-->
           <source
             media='(max-width: 600px)'
-            srcset='/public/assets/images/2.jpg'
+            srcset='/public/assets/images/services-left.jpg'
           />
           <!--Tablet and above Image-->
           <source
             media='(min-width: 601px)'
-            srcset='/public/assets/images/2.jpg'
+            srcset='/public/assets/images/services-left.jpg'
           />
           <img
             loading='lazy'
             decoding='async'
-            src='/public/assets/images/2.jpg'
+            src='/public/assets/images/services-left.jpg'
             alt='person'
             width='570'
             height='680'
+            aria-hidden='true'
           />
         </picture>
       </div>
@@ -89,12 +134,80 @@ const optimizedImage = await getOptimizedImage(landingImage);
 
 <style lang='less'>
   /*-- -------------------------- -->
-<---          Interior page       -->
+<---          Banner            -->
 <--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #banner-716 {
+      /* 175px - 200px top */
+      padding: clamp(10.9375rem, 10vw, 12.5rem) (16/16rem) (100/16rem);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        text-align: center;
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: (16/16rem);
+      }
+
+      .cs-int-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: '';
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #000;
+          opacity: 0.75;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
 
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {
-    #banner-715 {
+    #banner-716 {
       .cs-background {
         &:before {
           opacity: 1;
@@ -114,7 +227,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
 
   /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
-    #content-page-715 {
+    #content-page-716 {
       padding: var(--sectionPadding);
       /* clips the wave background from causing overflow issues when it goes off screen */
       overflow: hidden;
@@ -146,10 +259,11 @@ const optimizedImage = await getOptimizedImage(landingImage);
         img {
           width: 100%;
           height: auto;
-          margin: (16/16rem) 0;
+          margin: (16/16rem);
           display: block;
         }
       }
+
       h2,
       h3,
       h4,
@@ -158,18 +272,10 @@ const optimizedImage = await getOptimizedImage(landingImage);
         font-weight: 700;
         text-align: inherit;
         margin: 0 0 (16/16rem) 0;
-        color: var(--headerColor);
       }
 
       h2 {
         font-size: (32/16rem);
-        margin-top: (32/16rem);
-        color: var(--bodyTextColorGray);
-      }
-
-      h3 {
-        font-size: (24/16rem);
-        color: var(--primary);
       }
 
       h4,
@@ -192,7 +298,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
         text-align: inherit;
         width: 100%;
         margin: 0 0 (16/16rem) 0;
-        color: var(--bodyTextColor);
+        color: var(--bodyTextColorGray);
         &:last-of-type {
           margin-bottom: (32/16rem);
         }
@@ -209,7 +315,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
       ul {
         padding-left: (24/16rem);
         margin: 0 0 (32/16rem) 0;
-        color: var(--bodyTextColor);
+        color: var(--bodyTextColorGray);
         display: flex;
         flex-direction: column;
         gap: (16/16rem);
@@ -247,16 +353,12 @@ const optimizedImage = await getOptimizedImage(landingImage);
         /* prevents flexbox from squishing it */
         flex: none;
         position: relative;
-        /* flips it horizontally */
-        transform: scaleX(-1);
+        z-index: 1;
       }
 
       .cs-picture {
         width: (542/16em);
         height: (647/16em);
-        // border-radius: (285/16em);
-        border: (12/16em) solid #fff;
-        background-color: #f7f7f7;
         /* prevents border from affecting height and width */
         box-sizing: border-box;
         /* clips img tag corners */
@@ -265,6 +367,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
         position: absolute;
         top: 0;
         left: 0;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 
         img {
           width: 100%;
@@ -274,16 +377,18 @@ const optimizedImage = await getOptimizedImage(landingImage);
           position: absolute;
           top: 0;
           left: 0;
-          /* flips the image to its original orientation */
-          transform: scaleX(-1);
         }
+      }
+
+      .cs-background {
+        display: none;
       }
     }
   }
 
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {
-    #content-page-715 {
+    #content-page-716 {
       .cs-container {
         flex-direction: row;
         align-items: flex-start;
@@ -291,6 +396,12 @@ const optimizedImage = await getOptimizedImage(landingImage);
 
       .cs-image-group {
         display: block;
+        /* sends it to the left in the 1st position */
+        order: -1;
+      }
+
+      .cs-content {
+        margin-left: auto;
       }
 
       .cs-background {
@@ -299,7 +410,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
         background-color: #f7f7f7;
         display: block;
         position: absolute;
-        right: 0;
+        left: 0;
         top: 0;
         z-index: -1;
 
@@ -319,13 +430,22 @@ const optimizedImage = await getOptimizedImage(landingImage);
 
   /* Large Desktop 1300px */
   @media only screen and (min-width: 81.25rem) {
-    #content-page-715 {
+    #content-page-716 {
       .cs-image-group {
         /* position absolute so we can have it overflow the container as seen in the design. */
         font-size: inherit;
         position: absolute;
         top: (0/16rem);
-        right: (-100/16rem);
+        left: (-100/16rem);
+      }
+
+      .cs-background {
+        width: 50%;
+        /* with the left edge always positioned at the center line, we push right of the center line by 335px.  This ensures that this element will stay exactly in this position no matter hoe wide the screen gets */
+        margin-right: (335/16rem);
+        left: auto;
+        /* sets the right edge of the element to be at the center line */
+        right: 50%;
       }
     }
   }
