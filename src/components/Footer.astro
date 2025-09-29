@@ -1,339 +1,315 @@
----
-import client from "../data/client.json";
----
-
-<!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
-<footer id="footer">
-  <div class="container">
-    <div class="left-section">
-      <a class="logo" href="/"
-        ><img
-          loading="lazy"
-          decoding="async"
-          src="/assets/svgs/logo-white.svg"
-          alt="logo"
-          width="264"
-          height="78"
-        /></a
-      >
-      <p>
-        Extra content if you need it, if not you can delete this whole p tag. I
-        usually do.
-      </p>
+<!-- ============================================ --><!--                  Footer                      --><!-- ============================================ -->
+<footer id='footer-1390'>
+  <div class='cs-container'>
+    <div class='cs-top'>
+      <a aria-label='go back to home' class='cs-logo' href=''>
+        <img
+          class='cs-logo-img'
+          loading='lazy'
+          decoding='async'
+          src='/public/assets/images/nexa-logo.jpg'
+          alt='logo'
+          width='209'
+          height='40'
+        />
+      </a>
+      <ul class='cs-ul'>
+        <li class='cs-li'>
+          <a href='' class='cs-link'>Acasă</a>
+        </li>
+        <li class='cs-li'>
+          <a href='' class='cs-link'>Servicii</a>
+        </li>
+        <li class='cs-li'>
+          <a href='' class='cs-link'>Despre Noi</a>
+        </li>
+        <li class='cs-li'>
+          <a href='' class='cs-link'>Recenzii</a>
+        </li>
+        <li class='cs-li'>
+          <a href='' class='cs-link'>FAQ</a>
+        </li>
+      </ul>
     </div>
-    <div class="right-section">
-      <div class="lists">
-        <ul>
-          <li>
-            <h2>Information</h2>
-          </li>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About Us</a>
-          </li>
-          <li>
-            <a href="/projects">Projects</a>
-          </li>
-          <li>
-            <a href="/reviews">Reviews</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <h2>Services</h2>
-          </li>
-          <li>Service1</li>
-          <li>Service2</li>
-          <li>Service4</li>
-          <li>Service5</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>Contact</h2>
-          </li>
-          <li>
-            <a href="/contact">
-              {client.address.lineOne}<br />
-              {client.address.lineTwo}<br />
-              {client.address.city}
-              {client.address.state}
-              {client.address.zip}
-            </a>
-          </li>
-          <li>
-            <a href={`tel:${client.phoneForTel}`}>
-              T:
-              {client.phoneFormatted}
-            </a>
-          </li>
-          <li>
-            <a href={`mailto:${client.email}`}>Click to Email</a>
-          </li>
-        </ul>
+    <div class='cs-bottom'>
+      <!--Social-->
+      <ul class='cs-social'>
+        <li class='cs-social-li'>
+          <a
+            href=''
+            class='cs-social-link'
+            aria-label='facebook'
+            target='_blank'
+            rel='noopener'
+          >
+            <img
+              class='cs-social-icon cs-default'
+              src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg'
+              alt='icon'
+              loading='lazy'
+              decoding='async'
+              width='12'
+              height='12'
+              aria-hidden='true'
+            />
+          </a>
+        </li>
+        <li class='cs-social-li'>
+          <a
+            href=''
+            class='cs-social-link'
+            aria-label='twitter'
+            target='_blank'
+            rel='noopener'
+          >
+            <img
+              class='cs-social-icon cs-default'
+              src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg'
+              alt='icon'
+              loading='lazy'
+              decoding='async'
+              width='12'
+              height='12'
+              aria-hidden='true'
+            />
+          </a>
+        </li>
+        <li class='cs-social-li'>
+          <a
+            href=''
+            class='cs-social-link'
+            aria-label='instagram'
+            target='_blank'
+            rel='noopener'
+          >
+            <img
+              class='cs-social-icon cs-default'
+              src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg'
+              alt='icon'
+              loading='lazy'
+              decoding='async'
+              width='12'
+              height='12'
+              aria-hidden='true'
+            />
+          </a>
+        </li>
+        <li class='cs-social-li'>
+          <a
+            href=''
+            class='cs-social-link'
+            aria-label='twitter'
+            target='_blank'
+            rel='noopener'
+          >
+            <img
+              class='cs-social-icon cs-default'
+              src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg'
+              alt='icon'
+              loading='lazy'
+              decoding='async'
+              width='12'
+              height='12'
+              aria-hidden='true'
+            />
+          </a>
+        </li>
+      </ul>
+      <span class='cs-copyright'>
+        © Copyright 2025 - <a href='' class='cs-copyright-link'
+          >Nexa Fulfillment SRL</a
+        >
+      </span>
+      <div class='cs-flex'>
+        <a href='' class='cs-copyright-link'>Designed and Developed by</a>
+        <span class='cs-separater'>|</span>
+        <a href='https://costingeorgescu.com' class='cs-copyright-link'
+          >Costin G.</a
+        >
       </div>
     </div>
   </div>
-
-  <div class="credit">
-    <span>Designed and Hand Coded by</span>
-    <a href="/" target="_blank" rel="noopener">Your Company Name</a>
-    <span class="copyright"> Copyright 2023 - Present</span>
-  </div>
 </footer>
 
-<style lang="less">
-  /* Mobile */
-@media only screen and (min-width: 0em) {
-  #footer {
-    font-size: ~"min(4vw, 1.2em)";
-    padding: (84/16rem) 0 (20/16rem);
-    background: #1c1c1c;
+<style lang='less'>
+  /*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
 
-    .left-section {
-      text-align: center;
-      margin: auto;
-      margin-bottom: (50/16rem);
-      .logo {
-        text-align: center;
-        width: auto;
-        height: (32/16em);
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #footer-1390 {
+      padding: var(--sectionPadding);
+      background-color: var(--backgroundDark);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: (1280/16rem);
         margin: auto;
-        margin-bottom: (30/16em);
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        img {
-          width: auto;
-          height: 100%;
-          display: block;
+      .cs-top {
+        width: 100%;
+        margin-bottom: (40/16rem);
+        /* 24px - 64px */
+        padding-bottom: clamp(1.5rem, 5vw, 4rem);
+        border-bottom: 1px solid #484848;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 24px - 40px */
+        gap: clamp(1.25rem, 4vw, 2.5rem);
+      }
+
+      .cs-ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: (8/16rem);
+        /* 24px - 36px */
+        column-gap: clamp(1.5rem, 4vw, 2.25rem);
+      }
+
+      .cs-li {
+        list-style: none;
+      }
+
+      .cs-link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        margin: 0;
+        color: #bababa;
+        display: block;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary);
         }
       }
 
-      p {
-        font-size: (14/16rem);
-        line-height: 27/14;
-        text-align: center;
+      .cs-logo {
         width: 100%;
-        width: 307/14rem;
-        margin: auto;
-        color: #fff;
-        opacity: 0.9;
+        max-width: (110/16rem);
+        height: auto;
+        display: block;
+      }
+
+      .cs-logo-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .cs-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: (16/16rem);
+      }
+
+      .cs-social {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: (8/16rem);
+      }
+
+      .cs-social-li {
+        list-style: none;
+      }
+
+      .cs-social-link {
+        width: (32/16rem);
+        height: (32/16rem);
+        background-color: #484848;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: var(--primary);
+
+          .cs-social-icon {
+            filter: grayscale(1) brightness(1000%);
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-social-icon {
+        width: (12/16rem);
+        height: auto;
+        display: block;
+        opacity: 0.6;
+        transition: opacity 0.3s;
+      }
+
+      .cs-copyright {
+        font-size: (16/16rem);
+        color: #bababa;
+        line-height: 1.5em;
+        margin: 0;
+        display: block;
+      }
+
+      .cs-copyright-link {
+        color: var(--primary);
+      }
+
+      .cs-copyright-link,
+      .cs-separater {
+        font-size: (16/16rem);
+        text-decoration: none;
+        color: #bababa;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
+      .cs-separater {
+        margin: 0 (16/16rem);
+        display: inline-block;
       }
     }
+  }
 
-    .right-section {
-      width: 96%;
-      max-width: (407/16rem);
-      margin: auto;
-      .lists {
-        width: 96%;
-        max-width: (307/16rem);
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        ul {
-          margin-top: 0;
-          margin-bottom: 0;
-          padding: 0;
-
-          &:nth-of-type(3) {
-            margin-top: (50/16rem);
-            li {
-              margin-bottom: (16/16rem);
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-
-              &:last-of-type {
-                margin-bottom: 0;
-              }
-            }
-          }
-
-          li {
-            font-size: (18/16rem);
-            list-style: none;
-            margin-bottom: (12/16rem);
-            color: #fff;
-            opacity: 0.9;
-
-            a {
-              line-height: 21/18em;
-              text-decoration: none;
-              color: #fff;
-              transition: color 0.3s;
-              &:hover {
-                color: var(--primary);
-              }
-            }
-          }
-          h2 {
-            font-size: (18/16rem);
-            font-weight: bold;
-            line-height: 21/18em;
-            text-transform: uppercase;
-            margin-bottom: (37/16rem);
-            color: #fff;
-            position: relative;
-
-            &:before {
-              content: "";
-              width: (97/16rem);
-              height: (2/16rem);
-              background: var(--primary);
-              opacity: 1;
-              display: block;
-              position: absolute;
-              bottom: (-16/16rem);
-              left: 0;
-            }
-          }
-        }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #footer-1390 {
+      .cs-top {
+        align-items: flex-start;
       }
 
-      .buttons {
-        display: flex;
+      .cs-bottom {
+        flex-direction: row;
         justify-content: center;
       }
 
-      .cs-button-solid {
-        width: (250/16rem);
-        height: (53/16rem);
-        margin: 0;
-        padding-top: (3/16rem);
-      }
-    }
-
-    .credit {
-      font-size: (16/16rem);
-      line-height: (36/16rem);
-      text-align: center;
-      width: 96%;
-      margin: auto;
-      margin-top: (100/16rem);
-      color: #fff;
-
-      a {
-        font-size: (16/16rem);
-        text-decoration: none;
-        color: var(--primary);
-
-        &:hover {
-          text-decoration: underline;
-        }
+      .cs-flex {
+        margin: 0 auto;
       }
 
-      .copyright {
-        font-size: (16/16rem);
-        display: block;
+      .cs-social {
+        /* sends it to the right in the 3rd position */
+        order: 3;
       }
     }
   }
-}
-
-/* Small Desktop */
-@media only screen and (min-width: 64em) {
-  #footer {
-    font-size: ~"min(1.2vw, 1em)";
-    .container {
-      width: 96%;
-      max-width: (1320/16rem);
-      margin: auto;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-    }
-
-    .left-section {
-      text-align: left;
-      width: (409/16rem);
-      margin: 0;
-
-      .logo {
-        text-align: left;
-        height: (40/16rem);
-        margin-left: 0;
-      }
-
-      p {
-        text-align: left;
-        margin-left: 0;
-      }
-    }
-
-    .right-section {
-      width: (609/16rem);
-      max-width: none;
-      margin: 0;
-      .lists {
-        width: 96%;
-        max-width: (769/16rem);
-        max-width: initial;
-        margin: 0;
-
-        ul {
-          &:nth-of-type(3) {
-            margin-top: 0;
-
-            li:first-of-type {
-              margin-bottom: 0;
-            }
-          }
-
-          li {
-            a {
-              position: relative;
-
-              &:before {
-                content: "";
-                width: 0%;
-                height: (2/16rem);
-                background: var(--primary);
-                opacity: 1;
-                display: block;
-                position: absolute;
-                bottom: (-3/16rem);
-                left: 0;
-                transition: width 0.3s;
-              }
-
-              &:hover {
-                &:before {
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .buttons {
-        justify-content: flex-start;
-      }
-    }
-
-    .credit {
-      .copyright {
-        display: inline-block;
-      }
-    }
-  }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode {
-    #footer {
-      background: #061623;
-    }
-  }
-}
-
 </style>
