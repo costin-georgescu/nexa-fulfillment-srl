@@ -1,8 +1,19 @@
+---
+const normalizePath = (path: string | undefined): string => {
+  if (!path || path === '/') return '/';
+  return path.replace(/\/+$/, '');
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
+
+const isActive = (url: string): boolean => normalizePath(url) === currentPath;
+---
+
 <!-- ============================================ --><!--                  Footer                      --><!-- ============================================ -->
 <footer id='footer-1390'>
   <div class='cs-container'>
     <div class='cs-top'>
-      <a aria-label='go back to home' class='cs-logo' href=''>
+      <a aria-label='go back to home' class='cs-logo' href='/'>
         <img
           class='cs-logo-img'
           loading='lazy'
@@ -15,19 +26,38 @@
       </a>
       <ul class='cs-ul'>
         <li class='cs-li'>
-          <a href='/' class='cs-link'>Acasă</a>
+          <a href='/' class={`cs-link${isActive('/') ? ' cs-active' : ''}`}>
+            Acasă
+          </a>
         </li>
         <li class='cs-li'>
-          <a href='/services/' class='cs-link'>Servicii</a>
+          <a
+            href='/services/'
+            class={`cs-link${isActive('/services/') ? ' cs-active' : ''}`}
+          >
+            Servicii
+          </a>
         </li>
         <li class='cs-li'>
-          <a href='/about/' class='cs-link'>Despre Noi</a>
+          <a
+            href='/about/'
+            class={`cs-link${isActive('/about/') ? ' cs-active' : ''}`}
+          >
+            Despre Noi
+          </a>
         </li>
         <li class='cs-li'>
-          <a href='/reviews/' class='cs-link'>Recenzii</a>
+          <a
+            href='/reviews/'
+            class={`cs-link${isActive('/reviews/') ? ' cs-active' : ''}`}
+          >
+            Recenzii
+          </a>
         </li>
         <li class='cs-li'>
-          <a href='/faq/' class='cs-link'>FAQ</a>
+          <a href='/faq/' class={`cs-link${isActive('/faq/') ? ' cs-active' : ''}`}>
+            FAQ
+          </a>
         </li>
       </ul>
     </div>

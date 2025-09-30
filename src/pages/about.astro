@@ -358,7 +358,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         gap: (16/16rem);
       }
@@ -413,6 +413,9 @@ const optimizedImage = await getOptimizedImage(landingImage);
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {
     #banner-716 {
+      .cs-container {
+        align-items: flex-start;
+      }
       .cs-background {
         &:before {
           opacity: 1;
@@ -449,12 +452,12 @@ const optimizedImage = await getOptimizedImage(landingImage);
       }
 
       .cs-content {
-        text-align: left;
+        text-align: center;
         width: 100%;
         max-width: (542/16rem);
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
 
         .cs-button-solid {
           align-self: center;
@@ -483,7 +486,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
         width: (631/16em);
         height: (636/16em);
         position: relative;
-        display: block;
+        display: none; // Hidden on mobile for cleaner layout
       }
 
       .cs-picture {
@@ -529,14 +532,31 @@ const optimizedImage = await getOptimizedImage(landingImage);
       .cs-image-group {
         font-size: ~'min(1.2vw, 1em)';
         flex: none;
+        display: block; // Show images on desktop for visual impact
+        opacity: 0;
+        animation: fadeIn 0.8s ease-in-out 0.2s forwards;
       }
 
       .cs-content {
         width: 50%;
+        text-align: left;
+        align-items: flex-start;
 
         .cs-button-solid {
           align-self: flex-start;
         }
+      }
+    }
+
+    // Smooth fade-in animation for images
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
