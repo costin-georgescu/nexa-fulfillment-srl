@@ -15,109 +15,415 @@ const optimizedImage = await getOptimizedImage(landingImage);
   preloadedImage={optimizedImage}
 >
   <!-- ============================================ -->
-  <!--                    LANDING                   -->
+  <!--                   Banner                     -->
   <!-- ============================================ -->
 
-  <Landing title='About Us' image={optimizedImage} />
-
-  <!-- ============================================ -->
-  <!--                 Side By Side                 -->
-  <!-- ============================================ -->
-
-  <section id='sbs'>
+  <div id='banner-716'>
     <div class='cs-container'>
-      <!-- Left Image Section -->
-      <div class='cs-left'>
+      <span class='cs-int-title'>Despre noi</span>
+    </div>
+    <!--Background Image-->
+    <picture class='cs-background'>
+      <!--Mobile Image-->
+      <source
+        media='(max-width: 600px)'
+        srcset='/public/assets/images/about.jpg'
+      />
+      <!--Tablet and above Image-->
+      <source
+        media='(min-width: 601px)'
+        srcset='/public/assets/images/about.jpg'
+      />
+      <img
+        loading='lazy'
+        decoding='async'
+        src='/public/assets/images/about.jpg'
+        alt='about'
+        width='1280'
+        height='568'
+        aria-hidden='true'
+      />
+    </picture>
+  </div>
+
+  <!-- ============================================ -->
+  <!--                 About Story                  -->
+  <!-- ============================================ -->
+
+  <section id='about-story-1420'>
+    <div class='cs-container'>
+      <div class='cs-image-group'>
         <picture class='cs-picture cs-picture1'>
-          <source
-            media='(max-width: 600px)'
-            srcset='/assets/images/cabinets2-m.jpg'
-          />
-          <source
-            media='(min-width: 601px)'
-            srcset='/assets/images/cabinets2.jpg'
-          />
+          <source media='(max-width: 600px)' srcset='/assets/images/1.jpg' />
+          <source media='(min-width: 601px)' srcset='/assets/images/1.jpg' />
           <img
-            aria-hidden='true'
-            decoding='async'
-            src='/assets/images/cabinets2.jpg'
-            alt='cabinets'
             loading='lazy'
-            width='400'
-            height='563'
+            decoding='async'
+            src='/assets/images/1.jpg'
+            alt='warehouse'
+            width='522'
+            height='581'
           />
         </picture>
         <picture class='cs-picture cs-picture2'>
-          <source
-            media='(max-width: 600px)'
-            srcset='/assets/images/construction-m.jpg'
-          />
-          <source
-            media='(min-width: 601px)'
-            srcset='/assets/images/construction.jpg'
-          />
+          <source media='(max-width: 600px)' srcset='/assets/images/2.jpg' />
+          <source media='(min-width: 601px)' srcset='/assets/images/2.jpg' />
           <img
-            aria-hidden='true'
-            decoding='async'
-            src='/assets/images/construction.jpg'
-            alt='house'
             loading='lazy'
-            width='400'
-            height='563'
+            decoding='async'
+            src='/assets/images/2.jpg'
+            alt='logistics'
+            width='414'
+            height='400'
           />
         </picture>
       </div>
-      <!-- Right Content Section-->
-      <div class='cs-right'>
-        <span class='cs-topper'>About Us</span>
-        <h2 class='cs-title'>About Company Title</h2>
+      <div class='cs-content'>
+        <span class='cs-topper'>Povestea noastră</span>
+        <h2 class='cs-title'>
+          Parteneri de încredere pentru succesul afacerii tale
+        </h2>
         <p class='cs-text'>
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-          officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-          et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-          nonatourean olei aptent taciti sociosqu ad litora torquent per.
+          NEXA Fulfillment SRL este o companie românească specializată în
+          oferirea serviciilor complete de fulfillment și logistică pentru
+          afaceri e-commerce. Înființată cu scopul de a simplifica și optimiza
+          procesele logistice pentru branduri în creștere, ne-am construit
+          reputația pe baza eficienței, transparenței și dedicării față de
+          clienții noștri.
         </p>
         <p class='cs-text'>
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-          officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-          et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-          nonatourean olei aptent taciti sociosqu ad litora torquent per.
+          Înțelegem că fiecare afacere este unică, de aceea oferim soluții
+          personalizate care se adaptează nevoilor specifice ale fiecărui
+          partener. De la depozitare și gestionare stocuri până la procesare
+          comenzi și livrare, ne ocupăm de întregul lanț logistic pentru ca tu
+          să te poți concentra pe ceea ce contează cu adevărat: dezvoltarea
+          brandului tău.
         </p>
-        <div class='cs-flex-group'>
-          <p class='cs-flex-p'>
-            In consequat tincidunt turpis sit amet imperdiet. Praesent Classei
-            consequat tincidunt turpis sit amet imperdiet for mind.
-          </p>
-          <span class='cs-name'>Justin Time</span>
-          <span class='cs-job'>CEO-Founder</span>
-          <img
-            class='cs-quote-icon'
-            loading='lazy'
-            decoding='async'
-            src='https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg'
-            alt='gavel'
-            width='136'
-            height='77'
-          />
-        </div>
-        <a href='/projects' class='cs-button-solid'>Our Projects</a>
+        <p class='cs-text'>
+          Cu o echipă dedicată, tehnologie modernă și un angajament ferm față de
+          excelență, NEXA Fulfillment este mai mult decât un furnizor de
+          servicii – suntem partenerul tău strategic în creștere.
+        </p>
+        <a href='/contact' class='cs-button-solid'>Contactează-ne</a>
       </div>
     </div>
   </section>
-  <CTA />
+
+  <!-- ============================================ -->
+  <!--                  Core Values                 -->
+  <!-- ============================================ -->
+
+  <section id='values-1421'>
+    <div class='cs-container'>
+      <div class='cs-content'>
+        <span class='cs-topper'>Valorile noastre</span>
+        <h2 class='cs-title'>Ce ne diferențiază de competiție</h2>
+        <p class='cs-text'>
+          Suntem ghidați de principii clare care ne definesc modul de lucru și
+          relațiile cu partenerii noștri. Fiecare decizie pe care o luăm este
+          fundamentată pe aceste valori esențiale.
+        </p>
+      </div>
+      <ul class='cs-card-group'>
+        <li class='cs-item'>
+          <picture class='cs-icon-wrapper'>
+            <svg
+              class='cs-icon'
+              width='48'
+              height='48'
+              viewBox='0 0 48 48'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M24 4L6 14v10c0 11 7.5 21.3 18 24 10.5-2.7 18-13 18-24V14L24 4z'
+                stroke='#016fe7'
+                stroke-width='2'
+                fill='none'></path>
+              <path
+                d='M16 24l6 6 12-12'
+                stroke='#016fe7'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'></path>
+            </svg>
+          </picture>
+          <h3 class='cs-h3'>Capital 100% românesc</h3>
+          <p class='cs-item-text'>
+            Susținem dezvoltarea economiei locale și credem în parteneriate pe
+            termen lung cu afaceri românești. Investim în comunitatea noastră și
+            contribuim la creșterea ecosistemului de business local.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <picture class='cs-icon-wrapper'>
+            <svg
+              class='cs-icon'
+              width='48'
+              height='48'
+              viewBox='0 0 48 48'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M8 24h32M24 8v32'
+                stroke='#016fe7'
+                stroke-width='2'
+                stroke-linecap='round'></path>
+              <circle
+                cx='24'
+                cy='24'
+                r='16'
+                stroke='#016fe7'
+                stroke-width='2'
+                fill='none'></circle>
+              <path
+                d='M16 16l16 16M32 16l-16 16'
+                stroke='#016fe7'
+                stroke-width='1'
+                opacity='0.3'></path>
+            </svg>
+          </picture>
+          <h3 class='cs-h3'>Flexibilitate maximă</h3>
+          <p class='cs-item-text'>
+            Oferim soluții personalizate atât pentru afaceri la început de drum,
+            cât și pentru branduri consolidate. Ne adaptăm rapid la nevoile tale
+            în schimbare și la fluctuațiile sezoniere ale pieței.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <picture class='cs-icon-wrapper'>
+            <svg
+              class='cs-icon'
+              width='48'
+              height='48'
+              viewBox='0 0 48 48'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M24 8c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16'
+                stroke='#016fe7'
+                stroke-width='2'
+                fill='none'></path>
+              <path
+                d='M36 12l4 4 4-4M40 16V8'
+                stroke='#016fe7'
+                stroke-width='2'
+                stroke-linecap='round'></path>
+              <circle cx='24' cy='24' r='4' fill='#016fe7'></circle>
+            </svg>
+          </picture>
+          <h3 class='cs-h3'>Sustenabilitate</h3>
+          <p class='cs-item-text'>
+            Ne angajăm să utilizăm resursele într-un mod responsabil, punând
+            accent pe soluții sustenabile și eco-friendly. Investim în ambalaje
+            reciclabile și procese optimizate pentru reducerea amprentei de
+            carbon.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <picture class='cs-icon-wrapper'>
+            <svg
+              class='cs-icon'
+              width='48'
+              height='48'
+              viewBox='0 0 48 48'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <rect
+                x='8'
+                y='12'
+                width='32'
+                height='28'
+                rx='2'
+                stroke='#016fe7'
+                stroke-width='2'
+                fill='none'></rect>
+              <path
+                d='M8 20h32M16 12v-4M32 12v-4'
+                stroke='#016fe7'
+                stroke-width='2'></path>
+              <circle cx='16' cy='28' r='2' fill='#016fe7'></circle>
+              <circle cx='24' cy='28' r='2' fill='#016fe7'></circle>
+              <circle cx='32' cy='28' r='2' fill='#016fe7'></circle>
+            </svg>
+          </picture>
+          <h3 class='cs-h3'>Eficiență și transparență</h3>
+          <p class='cs-item-text'>
+            Știm că fiecare comandă este importantă. Oferim raportare în timp
+            real, comunicare constantă și procese optimizate pentru a asigura că
+            produsele tale ajung la clienți rapid și în condiții perfecte.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <picture class='cs-icon-wrapper'>
+            <svg
+              class='cs-icon'
+              width='48'
+              height='48'
+              viewBox='0 0 48 48'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M24 4l3 9h9l-7 6 3 9-8-6-8 6 3-9-7-6h9l3-9z'
+                stroke='#016fe7'
+                stroke-width='2'
+                fill='none'></path>
+              <circle
+                cx='24'
+                cy='38'
+                r='4'
+                stroke='#016fe7'
+                stroke-width='2'
+                fill='none'></circle>
+            </svg>
+          </picture>
+          <h3 class='cs-h3'>Calitate superioară</h3>
+          <p class='cs-item-text'>
+            Fiecare comandă este tratată cu atenție maximă, de la ambalare până
+            la expediere. Investim continuu în training-ul echipei și în
+            tehnologie pentru a menține standardele cele mai înalte.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <picture class='cs-icon-wrapper'>
+            <svg
+              class='cs-icon'
+              width='48'
+              height='48'
+              viewBox='0 0 48 48'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M12 24l8 8 16-16'
+                stroke='#016fe7'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'></path>
+              <circle
+                cx='24'
+                cy='24'
+                r='18'
+                stroke='#016fe7'
+                stroke-width='2'
+                fill='none'></circle>
+            </svg>
+          </picture>
+          <h3 class='cs-h3'>Parteneriat pe termen lung</h3>
+          <p class='cs-item-text'>
+            Nu suntem doar un furnizor de servicii – suntem partenerul tău
+            strategic. Creștem împreună cu afacerea ta, oferind suport constant
+            și soluții scalabile pentru fiecare etapă de dezvoltare.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 </BaseLayout>
 
 <style lang='less'>
-  /* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
-
   /*-- -------------------------- -->
-<---       Side By Side         -->
+<---          Banner            -->
 <--- -------------------------- -*/
 
   /* Mobile - 360px */
-  @media only screen and (min-width: 0em) {
-    #sbs {
+  @media only screen and (min-width: 0rem) {
+    #banner-716 {
+      /* 175px - 200px top */
+      padding: clamp(10.9375rem, 10vw, 12.5rem) (16/16rem) (100/16rem);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        text-align: center;
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: (16/16rem);
+      }
+
+      .cs-int-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &:before {
+          /* background color overlay */
+          content: '';
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: #000;
+          opacity: 0.75;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #banner-716 {
+      .cs-background {
+        &:before {
+          opacity: 1;
+          background: linear-gradient(
+            90.01deg,
+            rgba(0, 0, 0, 0.9) 16.86%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---       About Story          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #about-story-1420 {
       padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
 
       .cs-container {
         width: 100%;
@@ -125,34 +431,57 @@ const optimizedImage = await getOptimizedImage(landingImage);
         margin: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        row-gap: (40/16rem);
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
       }
 
-      .cs-left {
-        /* scaling the font size with the view width */
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        max-width: (542/16rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-topper {
+        margin-bottom: (16/16rem);
+      }
+
+      .cs-title {
+        max-width: 20ch;
+      }
+
+      .cs-text {
+        margin-bottom: (16/16rem);
+        color: var(--bodyTextColorGray);
+
+        &:last-of-type {
+          margin-bottom: (32/16rem);
+        }
+      }
+
+      .cs-image-group {
         font-size: ~'min(2.31vw, .7em)';
-        /* using ems so we can use font size to scale the whole section */
         width: (631/16em);
         height: (636/16em);
         position: relative;
+        display: block;
       }
 
       .cs-picture {
-        border-radius: (24/16em);
-        display: block;
         position: absolute;
-        /* clips img tag corners */
-        overflow: hidden;
+        display: block;
+
         img {
           width: 100%;
           height: 100%;
-          /* makes image act like a background image */
           object-fit: cover;
           position: absolute;
           top: 0;
           left: 0;
+          border-radius: (8/16rem);
         }
       }
 
@@ -161,155 +490,230 @@ const optimizedImage = await getOptimizedImage(landingImage);
         height: (581/16em);
         top: 0;
         left: 0;
+        z-index: 10;
       }
 
       .cs-picture2 {
         width: (414/16em);
         height: (400/16em);
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-        right: 0;
         bottom: 0;
-      }
-
-      .cs-right {
-        max-width: (542/16rem);
-        margin: auto;
-      }
-
-      .cs-topper {
-        text-align: left;
-        margin-bottom: (4/16rem);
-      }
-
-      .cs-title {
-        text-align: left;
-        max-width: (800/16rem);
-      }
-
-      .cs-text {
-        text-align: left;
-        max-width: (750/16rem);
-        margin-bottom: (16/16rem);
-        color: var(--bodyTextColor);
-
-        &:last-of-type {
-          margin-bottom: (32/16rem);
-        }
-      }
-
-      .cs-flex-group {
-        /* 16px - 32px */
-        padding: clamp(1rem, 3vw, 2rem);
-        background-color: #f7f7f7;
-        border-radius: (16/16rem);
-        position: relative;
-      }
-
-      .cs-flex-p {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        margin: 0 0 (16/16rem);
-        color: #353535;
-      }
-
-      .cs-name {
-        font-size: (16/16rem);
-        font-weight: bold;
-        line-height: 1.2em;
-        text-transform: uppercase;
-        margin: 0 0 (4/16rem);
-        color: var(--headerColor);
-        display: block;
-      }
-
-      .cs-job {
-        font-size: (14/16rem);
-        line-height: 1.5em;
-        color: #353535;
-        display: block;
-      }
-
-      .cs-quote-icon {
-        /* 60px - 136px */
-        width: clamp(3.75rem, 10vw, 8.5rem);
-        height: auto;
-        position: absolute;
-        /* 16px - 32px */
-        right: clamp(1rem, 4vw, 2rem);
-        bottom: (0/16rem);
-      }
-
-      .cs-button-solid {
-        margin-top: (32/16rem);
+        right: 0;
       }
     }
   }
 
   /* Desktop - 1024px */
-  @media only screen and (min-width: 64em) {
-    #sbs {
+  @media only screen and (min-width: 64rem) {
+    #about-story-1420 {
       .cs-container {
-        flex-flow: row;
+        flex-direction: row;
         justify-content: space-between;
-        gap: (52/16rem);
+        align-items: center;
       }
 
-      .cs-left {
+      .cs-image-group {
         font-size: ~'min(1.2vw, 1em)';
         flex: none;
       }
 
-      .cs-right {
-        margin: 0;
+      .cs-content {
+        width: 50%;
       }
     }
   }
 
-  /* Dark Mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #sbs {
-        .cs-left {
-          &:before,
-          &:after {
-            background: var(--accent);
-          }
-        }
+  /*-- -------------------------- -->
+<---        Core Values         -->
+<--- -------------------------- -*/
 
-        .cs-picture2 {
-          background-color: var(--dark);
-          /* 6px - 12px */
-          border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-        }
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #values-1421 {
+      padding: var(--sectionPadding);
+      background-color: var(--backgroundDark);
 
-        .cs-topper {
-          color: var(--primaryLight);
-        }
+      .cs-container {
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
 
-        .cs-title,
-        .cs-text,
-        .cs-h3,
-        .cs-flex-p,
-        .cs-name {
-          color: var(--bodyTextColorWhite);
-        }
+      .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .cs-flex-group {
-          background-color: var(--accent);
-        }
+      .cs-topper {
+        margin-bottom: (16/16rem);
+      }
 
-        .cs-job {
-          color: var(--bodyTextColorWhite);
-          opacity: 0.8;
-        }
+      .cs-title {
+        max-width: 20ch;
+      }
 
-        .cs-quote-icon {
-          opacity: 0.2;
+      .cs-text {
+        max-width: (650/16rem);
+        color: var(--bodyTextColorGray);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: (32/16rem) (24/16rem);
+        background-color: #fff;
+        border-radius: (8/16rem);
+        box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: (12/16rem);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0px 20px 100px 0px rgba(26, 26, 26, 0.12);
         }
+      }
+
+      .cs-icon-wrapper {
+        width: (64/16rem);
+        height: (64/16rem);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .cs-icon {
+        width: (48/16rem);
+        height: (48/16rem);
+      }
+
+      .cs-h3 {
+        font-size: (20/16rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: (8/16rem);
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: (16/16rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #values-1421 {
+      .cs-card-group {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #values-1421 {
+      .cs-card-group {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---        Statistics          -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #stats-1422 {
+      padding: var(--sectionPadding);
+      background-color: var(--primary);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cs-card-group {
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: (40/16rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .cs-number {
+        font-size: clamp(2.5rem, 5vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: (12/16rem);
+        color: #fff;
+        display: block;
+      }
+
+      .cs-item-text {
+        font-size: (16/16rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #stats-1422 {
+      .cs-card-group {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   }

@@ -14,22 +14,6 @@ const optimizedImage = await getOptimizedImage(landingImage);
   description='Meta description for the page'
   preloadedImage={optimizedImage}
 >
-  <!-- <Landing title='Servicii' image={optimizedImage} /> -->
-
-  <!-- ============================================ -->
-  <!--                 Content Page                 -->
-  <!-- ============================================ -->
-
-  <!-- ============================================ 
-    This Stitch is used for content heavy interior pages
-    that have no design or layout.  Often times these are 
-    content silos where you talk extensively about a topic
-    to educate your visitors and rank on Google for the 
-    content.  These are great for pages that have a TON
-    of content.  Design isn't important here, it's all 
-    about making the content accessible and easy to read.
-================================================= -->
-
   <!-- ============================================ -->
   <!--                   Banner                     -->
   <!-- ============================================ -->
@@ -53,8 +37,8 @@ const optimizedImage = await getOptimizedImage(landingImage);
       <img
         loading='lazy'
         decoding='async'
-        src='https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg'
-        alt='pills'
+        src='/public/assets/images/services.jpg'
+        alt='services'
         width='1280'
         height='568'
         aria-hidden='true'
@@ -62,72 +46,160 @@ const optimizedImage = await getOptimizedImage(landingImage);
     </picture>
   </div>
 
-  <section id='content-page-716'>
+  <!-- ============================================ -->
+  <!--                   Services                   -->
+  <!-- ============================================ -->
+
+  <section id='services-596'>
     <div class='cs-container'>
       <div class='cs-content'>
-        <h2>
-          Oferim o solutie completa de externalizare a operatiunilor logistice,
-          eliminand provocarile legate de gestionarea stocurilor, procesarea
-          comenzilor, ambalare si livrare consumatoare de timp.
+        <h2 class='cs-title'>
+          Soluții personalizate și scalabile de fulfillment
         </h2>
-        <h3>Depozitare si gestionare stocuri</h3>
-        <p>
-          Oferim spatii de depozitare moderne si organizate, cu sistem digital
-          de gestionare a stocurilor in timp real, pentru acuratete si control
-          total.
+        <p class='cs-text'>
+          Oferim o gamǎ completă de servicii de externalizare a operațiunilor
+          logistice, eliminând provocările legate de gestionarea stocurilor,
+          procesarea comenzilor, ambalare și livrare consumatoare de timp.
         </p>
-        <h3>Procesare si ambalare comenzi</h3>
-        <p>
-          Preluam rapid comenzile, le ambalam profesional conform
-          specificatiilor fiecarui brand si pregatim expedierile pentru livrare
-          <strong>in aceeasi zi. </strong>
-        </p>
-
-        <h3>Gestionarea retururilor</h3>
-        <p>
-          Oferim servicii complete de procesare a retururilor: receptie,
-          verificare, reintegrare in stoc sau raportare detaliata, pentru o
-          experienta post-vanzare fara probleme.
-        </p>
-
-        <h3>Alte servicii</h3>
-
-        <ul>
-          <li>Integrare cu platforme e-commerce.</li>
-          <li>Intermediere livrare nationala si internationala</li>
-          <li>Personalizare ambalaje si inserturi de brand</li>
-          <li>Suport clienti (Customer Service – optional sau dedicat)</li>
-          <li>Servicii de raportare si analiza</li>
-          <li>Servicii de prelucrare si reambalare produse</li>
-          <li>
+      </div>
+      <ul class='cs-card-group'>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <path d='M8 22h45v30H8V22z' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M30.5 6L53 18v4H8v-4L30.5 6z' fill='#016fe7'/>
+            <rect x='20' y='30' width='8' height='12' fill='#016fe7' opacity='0.3'/>
+            <rect x='33' y='30' width='8' height='12' fill='#016fe7' opacity='0.3'/>
+            <path d='M15 35h10M36 35h10M15 40h10M36 40h10' stroke='#016fe7' stroke-width='1.5'/>
+          </svg>
+          <h3 class='cs-h3'>Depozitare si gestionare stocuri</h3>
+          <p class='cs-item-text'>
+            Oferim spatii de depozitare moderne si organizate, cu sistem digital
+            de gestionare a stocurilor in timp real, pentru acuratete si control
+            total.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <rect x='15' y='20' width='30' height='28' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M15 29h30M30 20v28' stroke='#016fe7' stroke-width='2'/>
+            <path d='M20 10l10-4 10 4v10H20V10z' fill='#016fe7'/>
+            <circle cx='22' cy='38' r='2' fill='#016fe7'/>
+            <circle cx='38' cy='38' r='2' fill='#016fe7'/>
+          </svg>
+          <h3 class='cs-h3'>Procesare si ambalare comenzi</h3>
+          <p class='cs-item-text'>
+            Preluam rapid comenzile, le ambalam profesional conform
+            specificatiilor fiecarui brand si pregatim expedierile pentru
+            livrare in aceeasi zi.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <path d='M30 15c-8 0-14 6-14 14s6 14 14 14 14-6 14-14' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M40 20l4 4 4-4M44 24V15' stroke='#016fe7' stroke-width='2' stroke-linecap='round'/>
+            <rect x='22' y='24' width='16' height='10' stroke='#016fe7' stroke-width='1.5' fill='none'/>
+            <path d='M30 24v10M22 29h16' stroke='#016fe7' stroke-width='1.5'/>
+          </svg>
+          <h3 class='cs-h3'>Gestionarea retururilor</h3>
+          <p class='cs-item-text'>
+            Oferim servicii complete de procesare a retururilor: receptie,
+            verificare, reintegrare in stoc sau raportare detaliata, pentru o
+            experienta post-vanzare fara probleme.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <rect x='10' y='15' width='18' height='28' rx='2' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <rect x='33' y='15' width='18' height='28' rx='2' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M13 20h12M13 25h12M13 30h12' stroke='#016fe7' stroke-width='1.5'/>
+            <path d='M36 20h12M36 25h12M36 30h12' stroke='#016fe7' stroke-width='1.5'/>
+            <path d='M28 27h5l-2 4' stroke='#016fe7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+          </svg>
+          <h3 class='cs-h3'>Integrare cu platforme e-commerce</h3>
+          <p class='cs-item-text'>
+            Integrarea cu sistemele de e-commerce pentru gestionarea comenzilor,
+            stocurilor si raporturilor, asigurandu-ne ca procesul de
+            externalizare a operatiunilor logistice este integrat in fluxul
+            comercial al clientului.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <path d='M10 25h20v15H10z' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M30 28h8l6 6v6H30V28z' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <circle cx='20' cy='44' r='3' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <circle cx='40' cy='44' r='3' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M15 30h10M15 35h8' stroke='#016fe7' stroke-width='1.5'/>
+            <circle cx='48' cy='18' r='6' fill='#016fe7' opacity='0.3'/>
+            <path d='M48 15v6M45 18h6' stroke='#016fe7' stroke-width='1.5'/>
+          </svg>
+          <h3 class='cs-h3'>
+            Intermediere livrare nationala si internationala
+          </h3>
+          <p class='cs-item-text'>
+            Livram produsele in orice punct din Romania si in orice destinatie
+            din lume, folosind servicii de transport si logistici de calitate.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <rect x='15' y='18' width='30' height='28' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M15 27h30M30 18v28' stroke='#016fe7' stroke-width='2'/>
+            <path d='M20 10l10-4 10 4v8H20V10z' fill='#016fe7'/>
+            <path d='M22 35l3 3 6-6' stroke='#016fe7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+            <circle cx='38' cy='38' r='4' fill='#016fe7' opacity='0.3'/>
+            <path d='M36 38h4' stroke='#016fe7' stroke-width='1.5'/>
+          </svg>
+          <h3 class='cs-h3'>Personalizare ambalaje si inserturi de brand</h3>
+          <p class='cs-item-text'>
+            Personalizam ambalajele si inserturile de brand pentru a oferi
+            experienta clienti personalizata si profesionala.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <circle cx='30' cy='22' r='8' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M18 40c0-6 5-10 12-10s12 4 12 10' stroke='#016fe7' stroke-width='2' stroke-linecap='round'/>
+            <path d='M15 28c-3 0-5 2-5 5v4c0 2 2 3 4 3h2' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <path d='M45 28c3 0 5 2 5 5v4c0 2-2 3-4 3h-2' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <circle cx='30' cy='22' r='3' fill='#016fe7'/>
+          </svg>
+          <h3 class='cs-h3'>
+            Suport clienti (Customer Service – optional sau dedicat)
+          </h3>
+          <p class='cs-item-text'>Ofertam suport clienti optional</p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <rect x='12' y='15' width='36' height='30' rx='2' stroke='#016fe7' stroke-width='2' fill='none'/>
+            <rect x='18' y='32' width='6' height='8' fill='#016fe7'/>
+            <rect x='27' y='28' width='6' height='12' fill='#016fe7' opacity='0.7'/>
+            <rect x='36' y='24' width='6' height='16' fill='#016fe7' opacity='0.5'/>
+            <path d='M15 20h30M15 50h30' stroke='#016fe7' stroke-width='1.5'/>
+          </svg>
+          <h3 class='cs-h3'>Servicii de raportare si analiza</h3>
+          <p class='cs-item-text'>
+            Generam rapoarte detaliate si analize pentru a oferi experienta
+            clienti personalizata si profesionala.
+          </p>
+        </li>
+        <li class='cs-item'>
+          <svg class='cs-icon' width='61' height='58' viewBox='0 0 61 58' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+            <path d='M30 12l3 8h8l-6 5 2 8-7-5-7 5 2-8-6-5h8l3-8z' fill='#016fe7'/>
+            <path d='M15 42v-8M22 42v-12M30 42v-16M38 42v-12M45 42v-8' stroke='#016fe7' stroke-width='2' stroke-linecap='round'/>
+            <path d='M10 42h40' stroke='#016fe7' stroke-width='2'/>
+            <circle cx='30' cy='12' r='3' fill='#016fe7' opacity='0.3'/>
+          </svg>
+          <h3 class='cs-h3'>
             Scalabilitate in perioade de varf (campanii, Black Friday,
             sarbatori)
-          </li>
-        </ul>
-      </div>
-      <div class='cs-image-group'>
-        <picture class='cs-picture'>
-          <!--Mobile Image-->
-          <source
-            media='(max-width: 600px)'
-            srcset='/public/assets/images/services-left.jpg'
-          />
-          <!--Tablet and above Image-->
-          <source
-            media='(min-width: 601px)'
-            srcset='/public/assets/images/services-left.jpg'
-          />
-          <img
-            loading='lazy'
-            decoding='async'
-            src='/public/assets/images/services-left.jpg'
-            alt='person'
-            width='570'
-            height='680'
-            aria-hidden='true'
-          />
-        </picture>
-      </div>
+          </h3>
+          <p class='cs-item-text'>
+            Personalizam ambalajele si inserturile de brand pentru a oferi
+            experienta clienti personalizata si profesionala.
+          </p>
+        </li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
@@ -222,17 +294,14 @@ const optimizedImage = await getOptimizedImage(landingImage);
   }
 
   /*-- -------------------------- -->
-<---        Content Page        -->
+<---          Services          -->
 <--- -------------------------- -*/
 
   /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
-    #content-page-716 {
+    #services-596 {
       padding: var(--sectionPadding);
-      /* clips the wave background from causing overflow issues when it goes off screen */
       overflow: hidden;
-      position: relative;
-      z-index: 1;
 
       .cs-container {
         width: 100%;
@@ -241,211 +310,92 @@ const optimizedImage = await getOptimizedImage(landingImage);
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* 48px - 64px */
-        gap: clamp(3rem, 6vw, 4rem);
-        position: relative;
+        gap: (48/16rem);
       }
 
       .cs-content {
         /* set text align to left if content needs to be left aligned */
-        text-align: left;
+        text-align: center;
         width: 100%;
-        max-width: (738/16rem);
         display: flex;
         flex-direction: column;
         /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
+        align-items: center;
 
-        img {
-          width: 100%;
-          height: auto;
-          margin: (16/16rem);
-          display: block;
+        .cs-text {
+          color: var(--bodyTextColorGray);
         }
       }
 
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-weight: 700;
-        text-align: inherit;
-        margin: 0 0 (16/16rem) 0;
-      }
-
-      h2 {
-        font-size: (32/16rem);
-      }
-
-      h4,
-      h5,
-      h6 {
-        font-size: (20/16rem);
-      }
-
-      .cs-button-solid {
-        margin-bottom: (32/16rem);
-      }
-
-      .cs-color {
-        color: var(--primary);
-      }
-
-      p {
-        font-size: var(--bodyFontSize);
-        line-height: 1.5em;
-        text-align: inherit;
+      .cs-card-group {
         width: 100%;
-        margin: 0 0 (16/16rem) 0;
-        color: var(--bodyTextColorGray);
-        &:last-of-type {
-          margin-bottom: (32/16rem);
-        }
-
-        a {
-          font-size: inherit;
-          line-height: inherit;
-          text-decoration: underline;
-          color: var(--primary);
-        }
-      }
-
-      ol,
-      ul {
-        padding-left: (24/16rem);
-        margin: 0 0 (32/16rem) 0;
-        color: var(--bodyTextColorGray);
+        margin: 0;
+        /* 36px - 80px top & bottom */
+        /* 24px - 88px right & left */
+        padding: clamp(2.25rem, 6vw, 5rem) clamp(1.5rem, 6.4vw, 5.5rem);
+        background-color: #fff;
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        gap: (20/16rem);
+        /* 32px - 64px */
+        row-gap: clamp(2rem, 7vw, 4rem);
+      }
+
+      .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         gap: (16/16rem);
       }
 
-      ul {
-        li {
-          list-style: none;
-          color: inherit;
-          position: relative;
-
-          &:before {
-            /* custom list bullet */
-            content: '';
-            width: 3px;
-            height: 3px;
-            background: currentColor;
-            opacity: 1;
-            border-radius: 50%;
-            position: absolute;
-            display: block;
-            top: (10/16rem);
-            left: (-12/16rem);
-          }
-        }
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 3vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
       }
 
-      .cs-image-group {
-        /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
-        font-size: ~'min(1vw, 1em)';
-        /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
-        width: (542/16em);
-        height: (773/16em);
-        display: none;
-        /* prevents flexbox from squishing it */
-        flex: none;
-        position: relative;
-        z-index: 1;
-      }
-
-      .cs-picture {
-        width: (542/16em);
-        height: (647/16em);
-        /* prevents border from affecting height and width */
-        box-sizing: border-box;
-        /* clips img tag corners */
-        overflow: hidden;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-
-        img {
-          width: 100%;
-          height: 100%;
-          /* makes it act like a background image */
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-      }
-
-      .cs-background {
-        display: none;
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 3vw, 1rem);
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0;
+        color: var(--bodyTextColor);
       }
     }
   }
 
-  /* Tablet - 768px */
-  @media only screen and (min-width: 48rem) {
-    #content-page-716 {
-      .cs-container {
+  /* In-between - 550px */
+  @media only screen and (min-width: 34.375rem) {
+    #services-596 {
+      .cs-card-group {
         flex-direction: row;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* 48px - 64px */
+        row-gap: clamp(3rem, 6vw, 4rem);
       }
 
-      .cs-image-group {
-        display: block;
-        /* sends it to the left in the 1st position */
-        order: -1;
-      }
-
-      .cs-content {
-        margin-left: auto;
-      }
-
-      .cs-background {
-        width: 20%;
-        height: 100%;
-        background-color: #f7f7f7;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
-
-        img {
-          width: 100%;
-          height: 100%;
-          opacity: 0.2;
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 1;
-        }
+      .cs-item {
+        width: 47%;
       }
     }
   }
 
-  /* Large Desktop 1300px */
-  @media only screen and (min-width: 81.25rem) {
-    #content-page-716 {
-      .cs-image-group {
-        /* position absolute so we can have it overflow the container as seen in the design. */
-        font-size: inherit;
-        position: absolute;
-        top: (0/16rem);
-        left: (-100/16rem);
-      }
-
-      .cs-background {
-        width: 50%;
-        /* with the left edge always positioned at the center line, we push right of the center line by 335px.  This ensures that this element will stay exactly in this position no matter hoe wide the screen gets */
-        margin-right: (335/16rem);
-        left: auto;
-        /* sets the right edge of the element to be at the center line */
-        right: 50%;
+  /* Desktop 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-596 {
+      .cs-item {
+        width: 31%;
       }
     }
   }
