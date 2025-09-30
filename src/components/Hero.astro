@@ -171,17 +171,23 @@
       }
 
       .cs-button2 {
-        background-color: transparent;
-        border: 2px solid var(--primary);
-        color: var(--bodyTextColorWhite);
+        background: linear-gradient(135deg, rgba(1, 111, 231, 0.15) 0%, rgba(79, 143, 255, 0.15) 50%, rgba(1, 111, 231, 0.15) 100%);
+        background-size: 200% 100%;
+        border: 2px solid rgba(79, 143, 255, 0.6);
+        color: #fff;
+        box-shadow: 
+          0 4px 15px rgba(1, 111, 231, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
         &:hover {
-          color: var(--bodyTextColorGray);
-          border-color: var(--secondary);
-        }
-
-        &:before {
-          background-color: transparent;
+          background: linear-gradient(135deg, #016fe7 0%, #4f8fff 50%, #016fe7 100%);
+          background-size: 200% 100%;
+          background-position: 100% 0;
+          border-color: rgba(79, 143, 255, 0.8);
+          color: #fff;
+          box-shadow: 
+            0 6px 20px rgba(1, 111, 231, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
       }
     }

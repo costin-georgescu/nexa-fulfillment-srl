@@ -471,7 +471,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         gap: (16/16rem);
       }
@@ -526,6 +526,10 @@ const optimizedImage = await getOptimizedImage(landingImage);
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {
     #banner-716 {
+      .cs-container {
+        align-items: flex-start;
+      }
+
       .cs-background {
         &:before {
           opacity: 1;

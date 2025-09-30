@@ -443,6 +443,10 @@ const optimizedImage = await getOptimizedImage(landingImage);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        .cs-button-solid {
+          align-self: center;
+        }
       }
 
       .cs-topper {
@@ -481,7 +485,6 @@ const optimizedImage = await getOptimizedImage(landingImage);
           position: absolute;
           top: 0;
           left: 0;
-          border-radius: (8/16rem);
         }
       }
 
@@ -518,6 +521,10 @@ const optimizedImage = await getOptimizedImage(landingImage);
 
       .cs-content {
         width: 50%;
+
+        .cs-button-solid {
+          align-self: flex-start;
+        }
       }
     }
   }
@@ -557,33 +564,46 @@ const optimizedImage = await getOptimizedImage(landingImage);
       .cs-card-group {
         width: 100%;
         margin: 0;
-        /* 36px - 80px top & bottom */
-        /* 24px - 88px right & left */
-        padding: clamp(2.25rem, 6vw, 5rem) clamp(1.5rem, 6.4vw, 5.5rem);
-        background-color: #fff;
-        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
-        /* prevents padding and border from affecting height and width */
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        gap: (20/16rem);
-        /* 32px - 64px */
-        row-gap: clamp(2rem, 7vw, 4rem);
+        gap: clamp(2rem, 6vw, 3rem);
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        box-sizing: border-box;
       }
 
       .cs-item {
-        text-align: left;
         list-style: none;
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         gap: (16/16rem);
+        padding: clamp(2rem, 5vw, 2.75rem);
+        background: linear-gradient(155deg, #1c2c3b 0%, #25384b 100%);
+        box-shadow: 0 16px 45px rgba(10, 22, 35, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .cs-item:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top,
+          rgba(255, 255, 255, 0.08),
+          transparent 60%
+        );
+        pointer-events: none;
+        z-index: -;
       }
 
       .cs-icon-wrapper {
-        width: (64/16rem);
-        height: (64/16rem);
         margin: 0;
         display: flex;
         justify-content: center;
@@ -592,8 +612,16 @@ const optimizedImage = await getOptimizedImage(landingImage);
       }
 
       .cs-icon {
-        width: (48/16rem);
-        height: (48/16rem);
+        width: clamp(3.5rem, 8vw, 4.5rem);
+        height: clamp(3.5rem, 8vw, 4.5rem);
+        padding: clamp(0.75rem, 2vw, 1rem);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
       }
 
       .cs-h3 {
@@ -602,16 +630,17 @@ const optimizedImage = await getOptimizedImage(landingImage);
         line-height: 1.2em;
         font-weight: 700;
         margin: 0;
-        color: var(--headerColor);
+        color: #f7fbff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
       }
 
       .cs-item-text {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 3vw, 1rem);
-        line-height: 1.5em;
+        line-height: 1.6em;
         font-weight: 400;
         margin: 0;
-        color: var(--bodyTextColor);
+        color: rgba(229, 236, 244, 0.92);
       }
     }
   }
@@ -622,13 +651,12 @@ const optimizedImage = await getOptimizedImage(landingImage);
       .cs-card-group {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        /* 48px - 64px */
-        row-gap: clamp(3rem, 6vw, 4rem);
+        justify-content: center;
+        gap: clamp(1.5rem, 4vw, 2.5rem);
       }
 
       .cs-item {
-        width: 47%;
+        width: min(47%, 22rem);
       }
     }
   }
@@ -641,5 +669,4 @@ const optimizedImage = await getOptimizedImage(landingImage);
       }
     }
   }
-
 </style>
