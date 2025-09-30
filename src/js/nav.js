@@ -23,7 +23,34 @@ function ariaExpanded() {
   }
 }
 
-// mobile nav toggle code
+// Smooth scrolling for navigation links with hash targets
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    // Close mobile menu if open
+    const CSnavbarMenu = document.querySelector('#cs-navigation');
+    const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+    if (CSnavbarMenu.classList.contains('cs-active')) {
+      CSnavbarMenu.classList.remove('cs-active');
+      CShamburgerMenu.classList.remove('cs-active');
+      document.body.classList.remove('cs-open');
+    }
+    
+    // Scroll to the target element
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Mobile nav toggle code
 const dropDowns = Array.from(
   document.querySelectorAll('#cs-navigation .cs-dropdown')
 );
