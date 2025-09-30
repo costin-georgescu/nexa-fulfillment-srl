@@ -24,12 +24,12 @@ function ariaExpanded() {
 }
 
 // Smooth scrolling for navigation links with hash targets
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('href');
     if (targetId === '#') return;
-    
+
     // Close mobile menu if open
     const CSnavbarMenu = document.querySelector('#cs-navigation');
     const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
@@ -38,13 +38,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       CShamburgerMenu.classList.remove('cs-active');
       document.body.classList.remove('cs-open');
     }
-    
+
     // Scroll to the target element
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start',
       });
     }
   });
