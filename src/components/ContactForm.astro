@@ -274,7 +274,6 @@
         gap: clamp(1.5rem, 6vw, 3.75rem);
         position: relative;
         overflow: visible;
-        isolation: isolate;
 
         &:before {
           content: '';
@@ -289,7 +288,7 @@
           z-index: -1;
         }
 
-        &:after {
+        &::before {
           /* decorative accent extending from bottom */
           content: '';
           height: 100%;
@@ -304,8 +303,8 @@
           /* extends below and to the right of the card */
           top: clamp(2.5rem, 9vw, 5.75rem);
           left: clamp(2rem, 9vw, 5rem);
-          z-index: -2;
-          filter: hue-rotate(180deg) brightness(1.2);
+          z-index: -1;
+          // filter: hue-rotate(180deg) brightness(1.2);
         }
       }
 
