@@ -37,7 +37,12 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
       <div class='cs-ul-wrapper'>
         <ul id='cs-expanded' class='cs-ul' aria-expanded='false'>
           <li class='cs-li'>
-            <a href='/' class={`cs-li-link${isActive('/') ? ' cs-active' : ''}`}> ACASǍ </a>
+            <a
+              href='/'
+              class={`cs-li-link${isActive('/') ? ' cs-active' : ''}`}
+            >
+              ACASǍ
+            </a>
           </li>
           <li class='cs-li'>
             <a
@@ -54,6 +59,9 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
             >
               DESPRE NOI
             </a>
+          </li>
+          <li class='cs-li hidden-desktop'>
+            <a href='/#contact-1105' class='cs-li-link'>CONTACT</a>
           </li>
         </ul>
       </div>
@@ -154,26 +162,31 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
         width: clamp(2.75rem, 6vw, 3rem);
         height: clamp(2.75rem, 6vw, 3rem);
         margin: 0 0 0 auto;
-        background: linear-gradient(135deg, #016fe7 0%, #4f8fff 50%, #016fe7 100%);
+        background: linear-gradient(
+          135deg,
+          #016fe7 0%,
+          #4f8fff 50%,
+          #016fe7 100%
+        );
         background-size: 200% 100%;
         border: none;
         border-radius: (4/16rem);
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 
+        box-shadow:
           0 4px 15px rgba(1, 111, 231, 0.4),
           inset 0 1px 0 rgba(255, 255, 255, 0.3);
-        transition: 
+        transition:
           background-position 0.4s ease,
           box-shadow 0.3s ease,
           transform 0.2s ease;
         position: relative;
         overflow: hidden;
-        
+
         &:hover {
           background-position: 100% 0;
-          box-shadow: 
+          box-shadow:
             0 6px 20px rgba(1, 111, 231, 0.6),
             inset 0 1px 0 rgba(255, 255, 255, 0.4);
           transform: translateY(-2px);
@@ -182,7 +195,7 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
 
         &:active {
           transform: translateY(0);
-          box-shadow: 
+          box-shadow:
             0 2px 10px rgba(1, 111, 231, 0.4),
             inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
@@ -490,6 +503,10 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
         flex: none;
       }
 
+      .hidden-desktop {
+        display: none;
+      }
+
       .cs-li-link {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 1vw, 1rem);
@@ -507,6 +524,7 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
           }
         }
 
+       
         &.cs-active {
           &:before {
             width: 100%;

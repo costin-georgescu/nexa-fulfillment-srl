@@ -55,7 +55,10 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
           </a>
         </li>
         <li class='cs-li'>
-          <a href='/faq/' class={`cs-link${isActive('/faq/') ? ' cs-active' : ''}`}>
+          <a
+            href='/faq/'
+            class={`cs-link${isActive('/faq/') ? ' cs-active' : ''}`}
+          >
             FAQ
           </a>
         </li>
@@ -152,7 +155,6 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
       </span>
       <div class='cs-flex'>
         <a href='' class='cs-copyright-link'>Designed and Developed by</a>
-        <span class='cs-separater'>|</span>
         <a href='https://costingeorgescu.com' class='cs-copyright-link'
           >Costin G.</a
         >
@@ -298,11 +300,6 @@ const isActive = (url: string): boolean => normalizePath(url) === currentPath;
       }
 
       .cs-copyright-link {
-        color: var(--primary);
-      }
-
-      .cs-copyright-link,
-      .cs-separater {
         font-size: (16/16rem);
         text-decoration: none;
         color: #bababa;

@@ -50,6 +50,26 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+// Close mobile menu when contact link pointing to home form is clicked
+const contactNavLink = document.querySelector(
+  '#cs-navigation .cs-li.hidden-desktop a[href="/#contact-1105"]'
+);
+
+if (contactNavLink) {
+  contactNavLink.addEventListener('click', function () {
+    if (CSnavbarMenu.classList.contains('cs-active')) {
+      CShamburgerMenu.classList.remove('cs-active');
+      CSnavbarMenu.classList.remove('cs-active');
+      CSbody.classList.remove('cs-open');
+
+      const csUL = document.querySelector('#cs-expanded');
+      if (csUL && csUL.getAttribute('aria-expanded') !== 'false') {
+        csUL.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+}
+
 // Mobile nav toggle code
 const dropDowns = Array.from(
   document.querySelectorAll('#cs-navigation .cs-dropdown')

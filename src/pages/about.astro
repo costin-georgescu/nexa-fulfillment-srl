@@ -492,6 +492,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
       .cs-picture {
         position: absolute;
         display: block;
+        overflow: hidden;
 
         img {
           width: 100%;
@@ -504,11 +505,12 @@ const optimizedImage = await getOptimizedImage(landingImage);
       }
 
       .cs-picture1 {
-        width: (522/16em);
-        height: (581/16em);
+        width: (414/16em);
+        height: (400/16em);
         top: 0;
         left: 0;
         z-index: 10;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
       }
 
       .cs-picture2 {
@@ -516,6 +518,7 @@ const optimizedImage = await getOptimizedImage(landingImage);
         height: (400/16em);
         bottom: 0;
         right: 0;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
       }
     }
   }
