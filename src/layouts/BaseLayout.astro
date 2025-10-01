@@ -7,6 +7,11 @@ import '../styles/dark.less';
 
 // Receiving and destructuring props from the .astro pages
 const { description, title, preloadedImage } = Astro.props;
+
+const normalizedDomain = (client.domain ?? '').replace(/\/+$/, '');
+const domain = normalizedDomain.match(/^https?:\/\//)
+  ? normalizedDomain
+  : `https://${normalizedDomain}`;
 ---
 
 <!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
