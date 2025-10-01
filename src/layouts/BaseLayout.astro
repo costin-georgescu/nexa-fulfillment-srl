@@ -61,7 +61,8 @@ const { description, title, preloadedImage } = Astro.props;
     />
     <link rel='manifest' href='/assets/favicons/site.webmanifest' />
     <meta name='msapplication-TileColor' content='#da532c' />
-    <meta name='theme-color' content='#ffffff' />
+    <meta name='theme-color' content='#082032' />
+    <meta name='color-scheme' content='dark' />
 
     <!--For home page, use service keywords for the title, including location for SEO.
     Other pages should just include the page name.
@@ -118,22 +119,15 @@ const { description, title, preloadedImage } = Astro.props;
   }
 
   function setTheme() {
-    // default to the light theme
-    let theme = 'light';
+    // default to dark theme (ignoring browser/OS preferences)
+    let theme = 'dark';
 
-    // check localStorage for a saved 'theme' variable. if it's there, the user has visited before, so apply the necessary theme choices
+    // check localStorage for a saved 'theme' variable. if it's there, the user has visited before, so apply their choice
     if (localStorage.getItem('theme')) {
       theme = localStorage.getItem('theme');
     }
-    // if it's not there, check to see if the user has applied dark mode preferences themselves in the browser
-    else if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      theme = 'dark';
-    }
 
-    // if there is no preference set, the default of light will be used. apply accordingly
+    // apply the theme (defaults to dark if no preference is saved)
     theme === 'dark' ? enableDarkMode() : disableDarkMode();
   }
 
