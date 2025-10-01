@@ -25,19 +25,13 @@ const optimizedImage = await getOptimizedImage(landingImage);
     <!--Background Image-->
     <picture class='cs-background'>
       <!--Mobile Image-->
-      <source
-        media='(max-width: 600px)'
-        srcset='/public/assets/images/about.jpg'
-      />
+      <source media='(max-width: 600px)' srcset='/assets/images/about.jpg' />
       <!--Tablet and above Image-->
-      <source
-        media='(min-width: 601px)'
-        srcset='/public/assets/images/about.jpg'
-      />
+      <source media='(min-width: 601px)' srcset='/assets/images/about.jpg' />
       <img
         loading='lazy'
         decoding='async'
-        src='/public/assets/images/about.jpg'
+        src='/assets/images/about.jpg'
         alt='about'
         width='1280'
         height='568'
